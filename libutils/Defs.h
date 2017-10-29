@@ -33,6 +33,7 @@ typedef byte      bool;
 #define SIGN(expr) ((expr==0)?0:((expr>0)?1:-1))
 #define MIN(a,b) (((a)<(b))?(a):(b))
 #define MAX(a,b) (((a)>(b))?(a):(b))
+#define LEN(a) (sizeof(a)/sizeof(a)[0])
 
 //sentinel values
 #define vecNDef ((u32)-1)

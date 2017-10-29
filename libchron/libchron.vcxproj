@@ -128,6 +128,7 @@
     <ClInclude Include="Config.h" />
     <ClInclude Include="DeviceContext.h" />
     <ClInclude Include="Diagnostics.h" />
+    <ClInclude Include="EGA.h" />
     <ClInclude Include="EncodedAssets.h" />
     <ClInclude Include="FrameProfiler.h" />
     <ClInclude Include="Game.h" />
@@ -141,6 +142,7 @@
     <ClCompile Include="App.c" />
     <ClCompile Include="DeviceContext.c" />
     <ClCompile Include="Diagnostics.c" />
+    <ClCompile Include="EGA.c" />
     <ClCompile Include="Game.c" />
     <ClCompile Include="GUI.c" />
     <ClCompile Include="LogSpud.c" />

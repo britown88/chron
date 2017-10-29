@@ -10,7 +10,6 @@
 typedef struct AppData AppData;
 typedef struct Shader Shader;
 
-//int type note: these are actually GLints but we dont want to include glew in the header
 typedef i32 Uniform;
 typedef i32 TextureSlot;
 
