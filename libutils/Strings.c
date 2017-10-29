@@ -4,7 +4,7 @@
 #include "Defs.h"
 
 #pragma pack(push, 1)
-struct String_t{
+struct String{
    vec(char) *str;
 };
 #pragma pack(pop)

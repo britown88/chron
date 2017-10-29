@@ -9,7 +9,7 @@ Float3 vCross(Float3 a, Float3 b) {
    };
 }
 
-float vDot(Float3 a, Float3 b) {
+f32 vDot(Float3 a, Float3 b) {
    return a.x * b.x + a.y * b.y + a.z * b.z;
 }
 Float3 vSubtract(Float3 a, Float3 b) {
@@ -30,8 +30,8 @@ Float3 vNormalized(Float3 v) {
    return *vNormalize(&v);
 }
 Float3 *vNormalize(Float3 *v) {
-   float dot = sqrtf(vDot(*v, *v));
-   float iLen = 1.0f / dot;
+   f32 dot = sqrtf(vDot(*v, *v));
+   f32 iLen = 1.0f / dot;
 
    v->x *= iLen;
    v->y *= iLen;
@@ -40,6 +40,6 @@ Float3 *vNormalize(Float3 *v) {
    return v;
 }
 
-Float3 vScale(Float3 v, float s) {
+Float3 vScale(Float3 v, f32 s) {
    return (Float3) { v.x*s, v.y*s, v.z*s };
 }

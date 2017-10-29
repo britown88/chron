@@ -4,7 +4,7 @@
 #include "libutils/Defs.h"
 #include "Vector.h"
 
-typedef struct String_t String;
+typedef struct String String;
 
 //String *foo = stringCreate("test");
 //printf((char*)foo);

@@ -3,7 +3,7 @@
 
 #include <stddef.h>
 
-struct PriorityQueue_t{
+struct PriorityQueue{
    QueueNode *head;
    u32 offset;
 

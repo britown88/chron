@@ -9,7 +9,7 @@
 ImpleStateMessage(StateEnter)
 ImpleStateMessage(StateExit)
 
-struct FSM_t{
+struct FSM{
    vec(StateClosure) *states;
 };
 

@@ -68,11 +68,11 @@ typedef struct {
 } ColorRGBA;
 
 typedef struct {
-   float r, g, b;
+   f32 r, g, b;
 } ColorRGBf;
 
 typedef struct {
-   float r, g, b, a;
+   f32 r, g, b, a;
 } ColorRGBAf;
 #pragma pack(pop)
 

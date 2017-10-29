@@ -4,7 +4,7 @@
 #define T VectorTPart
 #define VEC_NAME CONCAT(vec_, T)
 
-typedef struct CONCAT(VEC_NAME, _t) VEC_NAME;
+typedef struct VEC_NAME VEC_NAME;
 
 #include "Vector_Functions.h"
 

@@ -4,12 +4,12 @@
 #include "Defs.h"
 
 typedef void * QueueElem;
-typedef struct QueueNode_t QueueNode;
-typedef struct PriorityQueue_t PriorityQueue;
+typedef struct QueueNode QueueNode;
+typedef struct PriorityQueue PriorityQueue;
 
 typedef QueueElem(*PQCompareFunc)(QueueElem, QueueElem);
 
-struct QueueNode_t{
+struct QueueNode{
    QueueNode *next, *prev, *child;
 };
 
@@ -34,7 +34,7 @@ void priorityQueueDecreaseKey(PriorityQueue *self, QueueElem data);
 //********************
 //dijkstra's
 //********************
-typedef struct Dijkstras_t Dijkstras;
+typedef struct Dijkstras Dijkstras;
 
 typedef struct {
    u32(*getNeighbors)(Dijkstras*, QueueElem, QueueElem**);
@@ -43,7 +43,7 @@ typedef struct {
    void(*destroy)(Dijkstras*);
 }DijkstrasVTable;
 
-struct Dijkstras_t{
+struct Dijkstras{
    DijkstrasVTable *vTable;
    PriorityQueue *queue;
 };

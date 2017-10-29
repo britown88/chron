@@ -6,13 +6,13 @@ Matrix matrixMultiply(Matrix *lhs, Matrix *rhs) {
    i32 x, y, i;
    for (y = 0; y < 4; ++y)
    {
-      float v1[4] = { lhs->data[y], lhs->data[y + 4], lhs->data[y + 8], lhs->data[y + 12] };
+      f32 v1[4] = { lhs->data[y], lhs->data[y + 4], lhs->data[y + 8], lhs->data[y + 12] };
 
       for (x = 0; x < 4; ++x)
       {
-         const float *v2 = &(rhs->data[x * 4]);
+         const f32 *v2 = &(rhs->data[x * 4]);
 
-         float v = 0.0f;
+         f32 v = 0.0f;
          for (i = 0; i < 4; ++i)
             v += v1[i] * v2[i];
 
@@ -38,7 +38,7 @@ void matrixIdentity(Matrix *m) {
    m->data[15] = 1.0f;
 }
 
-void matrixOrtho(Matrix *m, float left, float right, float bottom, float top, float near, float far) {
+void matrixOrtho(Matrix *m, f32 left, f32 right, f32 bottom, f32 top, f32 near, f32 far) {
    m->data[1] = m->data[2] = m->data[3] = m->data[4] = m->data[6] =
       m->data[7] = m->data[8] = m->data[9] = m->data[11] = 0.0f;
 

@@ -9,7 +9,7 @@
 
 #include "Vector_Functions.h"
 
-struct CONCAT(VEC_NAME, _t){
+struct VEC_NAME{
    T *data;
 
    void(*destroy)(T*);

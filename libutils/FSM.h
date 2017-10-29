@@ -3,7 +3,7 @@
 #include "libutils\RTTI.h"
 #include "Defs.h"
 
-typedef struct FSM_t FSM;
+typedef struct FSM FSM;
 
 typedef void* Message;
 

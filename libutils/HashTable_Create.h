@@ -9,8 +9,8 @@
 
 #include "HashTable_Functions.h"
 
-typedef struct CONCAT(HT_BUCKET, _t) {
-   struct CONCAT(HT_BUCKET, _t) *next;
+typedef struct HT_BUCKET {
+   struct HT_BUCKET *next;
    T data;
 } HT_BUCKET;
 
@@ -174,7 +174,7 @@ static void _htGrow(T)(HT_NAME *self){
 
    ++self->power;
 #ifndef UNCHECKED
-   self->buckets = checkedCalloc(1, sizeof(HT_BUCKET*) * (1 << self->power));
+   self->buckets = checkedCalloc(1, sizeof(HT_BUCKET*) * (uPtr)(1 << self->power));
 #else
    self->buckets = calloc(1, sizeof(HT_BUCKET*) * (uPtr)(1 << self->power));
 #endif   
@@ -212,7 +212,7 @@ static void htInsert(T)(HT_NAME *self, T *item){
       //init
       self->power = 5;
 #ifndef UNCHECKED
-      self->buckets = checkedCalloc(1, sizeof(HT_BUCKET*) * (1 << self->power));
+      self->buckets = checkedCalloc(1, sizeof(HT_BUCKET*) * (uPtr)(1 << self->power));
 #else
       self->buckets = calloc(1, sizeof(HT_BUCKET*) * (uPtr)(1 << self->power));
 #endif

@@ -2,7 +2,7 @@
 
 #include "Defs.h"
 
-typedef struct BitBuffer_t{
+typedef struct BitBuffer{
    i32 pos;
    i32 deleteData;
    byte *buffer;

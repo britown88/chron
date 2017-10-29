@@ -5,7 +5,6 @@
 #include <stdio.h>
 #include "libutils\BitTwiddling.h"
 #include "libutils\IntrusiveHeap.h"
-#include <assert.h>
 
 /*this makes our hashtables unchecked*/
 #define UNCHECKED
@@ -169,7 +168,7 @@ void printMemoryLeaks(){
       fclose(output);
    }
 
-   assert(!leaks);
+   ASSERT(!leaks);
    
    freeMemTable();
    freeFileTable();
