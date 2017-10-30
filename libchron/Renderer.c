@@ -440,7 +440,7 @@ void textureBind(Texture *self, TextureSlot slot) {
       self->dirty = false;
    }
 }
-uint32_t textureGetGLHandle(Texture *self) {
+u32 textureGetGLHandle(Texture *self) {
    if (!self->isLoaded) {
       _textureAcquire(self);
    }

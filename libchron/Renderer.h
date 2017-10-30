@@ -72,7 +72,7 @@ void textureBind(Texture *self, TextureSlot slot);
 Int2 textureGetSize(Texture *t);
 
 //because why not
-uint32_t textureGetGLHandle(Texture *self);
+u32 textureGetGLHandle(Texture *self);
 
 const ColorRGBA *textureGetPixels(Texture *self);
 
